@@ -29,11 +29,22 @@ namespace FileIOandStream
             Console.WriteLine(lines[0]);
             Console.WriteLine(lines[1]);
         }
+        /// <summary>
+        /// read all txt
+        /// </summary>
+        /// <param name="filepath"></param>
         public static void ReadAllTxt(string filepath)
         {
             string lines = File.ReadAllText(filepath);
             Console.WriteLine(lines);
            
+        }
+        public static void copy(string filepath)
+        {
+            string copyPath = "C:\\Users\\hp\\Desktop\\newFolder\\FileIOAndStreamDemo\\FileIOandStream\\FileIOandStream\\ExampleNew.txt";
+            File.Copy(filepath, copyPath);
+           
+
         }
     }
 }
