@@ -29,5 +29,11 @@ namespace FileIOandStream
             Console.WriteLine(lines[0]);
             Console.WriteLine(lines[1]);
         }
+        public static void ReadAllTxt(string filepath)
+        {
+            string lines = File.ReadAllText(filepath);
+            Console.WriteLine(lines);
+           
+        }
     }
 }
