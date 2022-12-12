@@ -8,6 +8,9 @@ namespace FileIOandStream
 {
     public class FileData
     {
+        /// <summary>
+        /// exitFile
+        /// </summary>
         public static void FileExist()
         {
             string filepath = "C:\\Users\\hp\\Desktop\\newFolder\\FileIOAndStreamDemo\\FileIOandStream\\FileIOandStream\\Example.txt";
