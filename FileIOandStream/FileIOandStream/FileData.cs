@@ -11,13 +11,23 @@ namespace FileIOandStream
         /// <summary>
         /// exitFile
         /// </summary>
-        public static void FileExist()
+        public static void FileExist(string filepath)
         {
-            string filepath = "C:\\Users\\hp\\Desktop\\newFolder\\FileIOAndStreamDemo\\FileIOandStream\\FileIOandStream\\Example.txt";
+           
             if (File.Exists(filepath))
             {
                 Console.WriteLine("File Exists");
             }
+        }
+        /// <summary>
+        /// ReadAllLine
+        /// </summary>
+        /// <param name="filepath"></param>
+        public static void ReadAllLine(string filepath)
+        {
+            string[] lines = File.ReadAllLines(filepath);
+            Console.WriteLine(lines[0]);
+            Console.WriteLine(lines[1]);
         }
     }
 }

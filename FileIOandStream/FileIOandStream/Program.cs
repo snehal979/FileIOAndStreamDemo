@@ -4,7 +4,20 @@
     {
         public static void Main(string[] args)
         {
-            FileData.FileExist();
+            string filepath = "C:\\Users\\hp\\Desktop\\newFolder\\FileIOAndStreamDemo\\FileIOandStream\\FileIOandStream\\Example.txt";
+            Console.WriteLine("1.exitfile 2.readallline");
+            int num = Convert.ToInt16(Console.ReadLine());
+            switch (num)
+            {
+                case 1:
+                    FileData.FileExist(filepath);
+                    break;
+                case 2:
+                    FileData.ReadAllLine(filepath);
+                    break;
+            }
+           
+           
         }
     }
 }
