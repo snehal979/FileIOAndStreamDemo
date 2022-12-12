@@ -39,11 +39,22 @@ namespace FileIOandStream
             Console.WriteLine(lines);
            
         }
+        /// <summary>
+        /// copy file
+        /// </summary>
+        /// <param name="filepath"></param>
         public static void copy(string filepath)
         {
             string copyPath = "C:\\Users\\hp\\Desktop\\newFolder\\FileIOAndStreamDemo\\FileIOandStream\\FileIOandStream\\ExampleNew.txt";
             File.Copy(filepath, copyPath);
            
+
+        }
+        public static void Delect()
+        {
+            string copyPath = "C:\\Users\\hp\\Desktop\\newFolder\\FileIOAndStreamDemo\\FileIOandStream\\FileIOandStream\\ExampleNew.txt";
+            File.Delete(copyPath);
+
 
         }
     }
