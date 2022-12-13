@@ -72,5 +72,14 @@ namespace FileIOandStream
             }
             Console.ReadLine();
         }
+        public void WriteUsingStreamWriter(string filepath)
+        {
+            using (StreamWriter sr = File.AppendText(filepath))
+            {
+                sr.WriteLine("How Are you?");
+                sr.Close();
+                Console.WriteLine(File.ReadAllText(filepath));
+            }
+        }
     }
 }

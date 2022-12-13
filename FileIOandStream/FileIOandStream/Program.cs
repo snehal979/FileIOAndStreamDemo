@@ -5,8 +5,9 @@
         public static void Main(string[] args)
         {
             string filepath = "C:\\Users\\hp\\Desktop\\newFolder\\FileIOAndStreamDemo\\FileIOandStream\\FileIOandStream\\Example.txt";
-            Console.WriteLine("1.exitfile 2.readallline 3. readalltxt 4.copy file 5.Delect file \n 6.Read from Stream reader");
+            Console.WriteLine("1.exitfile 2.readallline 3. readalltxt 4.copy file 5.Delect file \n 6.Read from Stream reader 7.write file through stream write");
             int num = Convert.ToInt16(Console.ReadLine());
+            FileData file = new FileData();
             switch (num)
             {
                 case 1:
@@ -25,8 +26,13 @@
                     FileData.Delect();
                     break;
                 case 6:
-                    FileData file = new FileData();
+                   
                     file.ReadFromStreamReader(filepath);
+                    break;
+                    case 7:
+
+                    file.WriteUsingStreamWriter(filepath);
+                    break;
                     break;
             }
            
