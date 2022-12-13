@@ -4,8 +4,10 @@
     {
         public static void Main(string[] args)
         {
+            string binaryFile = @"C:\Users\hp\Desktop\newFolder\FileIOAndStreamDemo\FileIOandStream\FileIOandStream\BinaryFile.txt";
             string filepath = "C:\\Users\\hp\\Desktop\\newFolder\\FileIOAndStreamDemo\\FileIOandStream\\FileIOandStream\\Example.txt";
-            Console.WriteLine("1.exitfile 2.readallline 3. readalltxt 4.copy file 5.Delect file \n 6.Read from Stream reader 7.write file through stream write");
+            Console.WriteLine("1.exitfile 2.readallline 3. readalltxt 4.copy file 5.Delect file \n 6.Read from Stream reader 7.write file through stream write \n 8.Serialization and 9 .Deserization");
+            BinarySerilization binarySerilization = new BinarySerilization();
             int num = Convert.ToInt16(Console.ReadLine());
             FileData file = new FileData();
             switch (num)
@@ -33,6 +35,11 @@
 
                     file.WriteUsingStreamWriter(filepath);
                     break;
+                case 8:
+                    binarySerilization.Serialization(binaryFile);
+                    break;
+                case 9:
+                    binarySerilization.DeSerialization(binaryFile);
                     break;
             }
            
