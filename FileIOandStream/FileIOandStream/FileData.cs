@@ -50,12 +50,27 @@ namespace FileIOandStream
            
 
         }
+        /// <summary>
+        /// Delect file
+        /// </summary>
         public static void Delect()
         {
             string copyPath = "C:\\Users\\hp\\Desktop\\newFolder\\FileIOAndStreamDemo\\FileIOandStream\\FileIOandStream\\ExampleNew.txt";
             File.Delete(copyPath);
 
 
+        }
+        public void ReadFromStreamReader(string filepath)
+        {
+            using (StreamReader sr = File.OpenText(filepath))
+            {
+                string s = "";
+                while((s = sr.ReadLine()) != null)
+                {
+                    Console.WriteLine(s);
+                }
+            }
+            Console.ReadLine();
         }
     }
 }
