@@ -6,8 +6,9 @@
         {
             string binaryFile = @"C:\Users\hp\Desktop\newFolder\FileIOAndStreamDemo\FileIOandStream\FileIOandStream\BinaryFile.txt";
             string filepath = "C:\\Users\\hp\\Desktop\\newFolder\\FileIOAndStreamDemo\\FileIOandStream\\FileIOandStream\\Example.txt";
-            Console.WriteLine("1.exitfile 2.readallline 3. readalltxt 4.copy file 5.Delect file \n 6.Read from Stream reader 7.write file through stream write \n 8.Serialization and 9 .Deserization");
+            Console.WriteLine("1.exitfile 2.readallline 3. readalltxt 4.copy file 5.Delect file \n 6.Read from Stream reader 7.write file through stream write \n 8.Serialization and 9 .Deserization \n 10 Json data Serialization 11. json data deserialization");
             BinarySerilization binarySerilization = new BinarySerilization();
+            JsonSerializationDeserialization json = new JsonSerializationDeserialization();
             int num = Convert.ToInt16(Console.ReadLine());
             FileData file = new FileData();
             switch (num)
@@ -41,6 +42,14 @@
                 case 9:
                     binarySerilization.DeSerialization(binaryFile);
                     break;
+                case 10:
+                    json.JsonSerialize();
+                    break;
+                case 11:
+                    json.JsonDeserialization();
+                    break;
+                    
+                   
             }
            
            
